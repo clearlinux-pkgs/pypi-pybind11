@@ -4,7 +4,7 @@
 #
 Name     : pypi-pybind11
 Version  : 2.9.2
-Release  : 38
+Release  : 39
 URL      : https://files.pythonhosted.org/packages/cf/6a/a7f2c40fdb43fcf59bc1eebb0a4c4206a99ccddee6391a1168fa6efebce9/pybind11-2.9.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cf/6a/a7f2c40fdb43fcf59bc1eebb0a4c4206a99ccddee6391a1168fa6efebce9/pybind11-2.9.2.tar.gz
 Summary  : Seamless operability between C++11 and Python
@@ -17,7 +17,7 @@ Requires: pypi-pybind11-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(wheel)
-BuildRequires : pytest
+BuildRequires : pypi-pytest
 
 %description
 .. figure:: https://github.com/pybind/pybind11/raw/master/docs/pybind11-logo.png
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648738840
+export SOURCE_DATE_EPOCH=1650558105
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
