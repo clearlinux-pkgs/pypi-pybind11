@@ -4,7 +4,7 @@
 #
 Name     : pypi-pybind11
 Version  : 2.10.0
-Release  : 48
+Release  : 49
 URL      : https://files.pythonhosted.org/packages/59/f6/aafe0b7e798f25632b199523cce98552fde53e8c552b9d96765426532d5f/pybind11-2.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/59/f6/aafe0b7e798f25632b199523cce98552fde53e8c552b9d96765426532d5f/pybind11-2.10.0.tar.gz
 Summary  : Seamless operability between C++11 and Python
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1658094775
+export SOURCE_DATE_EPOCH=1666662444
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +107,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pybind11
-cp %{_builddir}/pybind11-2.10.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-pybind11/3dbd61e2b2c71dcc658c3da90bacf2e15958075a
+cp %{_builddir}/pybind11-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-pybind11/3dbd61e2b2c71dcc658c3da90bacf2e15958075a || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -131,33 +131,33 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/attr.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/buffer_info.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/cast.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/chrono.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/common.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/complex.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/common.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/descr.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/init.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/internals.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/type_caster_base.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/detail/typeid.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/eigen.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/embed.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/eval.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/functional.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/iostream.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/operators.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/options.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/pytypes.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/stl.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/stl/filesystem.h
-/usr/lib/python3.10/site-packages/pybind11/include/pybind11/stl_bind.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/attr.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/buffer_info.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/cast.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/chrono.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/common.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/complex.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/class.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/common.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/descr.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/init.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/internals.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/type_caster_base.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/detail/typeid.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/eigen.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/embed.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/eval.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/functional.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/gil.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/iostream.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/numpy.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/operators.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/options.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/pybind11.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/pytypes.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/stl.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/stl/filesystem.h
+/usr/lib/python3.11/site-packages/pybind11/include/pybind11/stl_bind.h
 
 %files license
 %defattr(0644,root,root,0755)
