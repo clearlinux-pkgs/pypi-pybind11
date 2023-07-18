@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-pybind11
-Version  : 2.11.0
-Release  : 55
-URL      : https://files.pythonhosted.org/packages/b6/f8/d271f64711214c8733076b50896e5861ec5ec96e08f4271b04888ef43d1d/pybind11-2.11.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b6/f8/d271f64711214c8733076b50896e5861ec5ec96e08f4271b04888ef43d1d/pybind11-2.11.0.tar.gz
+Version  : 2.11.1
+Release  : 56
+URL      : https://files.pythonhosted.org/packages/3a/cc/903bb18de90b5d6e15379c97175371ac6414795d94b9c2f6468a9c1303aa/pybind11-2.11.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/3a/cc/903bb18de90b5d6e15379c97175371ac6414795d94b9c2f6468a9c1303aa/pybind11-2.11.1.tar.gz
 Summary  : Seamless operability between C++11 and Python
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -75,10 +75,10 @@ python3 components for the pypi-pybind11 package.
 
 
 %prep
-%setup -q -n pybind11-2.11.0
-cd %{_builddir}/pybind11-2.11.0
+%setup -q -n pybind11-2.11.1
+cd %{_builddir}/pybind11-2.11.1
 pushd ..
-cp -a pybind11-2.11.0 buildavx2
+cp -a pybind11-2.11.1 buildavx2
 popd
 
 %build
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689613386
+export SOURCE_DATE_EPOCH=1689694381
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
