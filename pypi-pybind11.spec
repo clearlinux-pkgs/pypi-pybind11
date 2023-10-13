@@ -5,7 +5,7 @@
 #
 Name     : pypi-pybind11
 Version  : 2.11.1
-Release  : 57
+Release  : 58
 URL      : https://files.pythonhosted.org/packages/3a/cc/903bb18de90b5d6e15379c97175371ac6414795d94b9c2f6468a9c1303aa/pybind11-2.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3a/cc/903bb18de90b5d6e15379c97175371ac6414795d94b9c2f6468a9c1303aa/pybind11-2.11.1.tar.gz
 Summary  : Seamless operability between C++11 and Python
