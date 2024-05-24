@@ -1,0 +1,27 @@
+From e2386080aba07bc979759ecabbff9881c3139cf3 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Thu, 23 May 2024 19:43:11 -0700
+Subject: [PATCH] Add pybind11-config script
+
+---
+ pybind11-config | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100755 pybind11-config
+
+diff --git a/pybind11-config b/pybind11-config
+new file mode 100755
+index 0000000..ee29281
+--- /dev/null
++++ b/pybind11-config
+@@ -0,0 +1,8 @@
++#!/usr/bin/python3
++# -*- coding: utf-8 -*-
++import re
++import sys
++from pybind11.__main__ import main
++if __name__ == "__main__":
++    sys.argv[0] = re.sub(r"(-script\.pyw|\.exe)?$", "", sys.argv[0])
++    sys.exit(main())
+-- 
+2.45.1
+

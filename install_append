@@ -1,0 +1,2 @@
+install -D -m 00755 pybind11-config %{buildroot}/usr/bin/pybind11-config
+python3 setup.py install --root=%{buildroot}
