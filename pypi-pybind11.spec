@@ -7,7 +7,7 @@
 #
 Name     : pypi-pybind11
 Version  : 2.12.0
-Release  : 63
+Release  : 64
 URL      : https://github.com/pybind/pybind11/archive/refs/tags/v2.12.0.tar.gz
 Source0  : https://github.com/pybind/pybind11/archive/refs/tags/v2.12.0.tar.gz
 Summary  : Seamless operability between C++11 and Python
@@ -23,7 +23,6 @@ BuildRequires : buildreq-cmake
 BuildRequires : eigen-data
 BuildRequires : eigen-dev
 BuildRequires : glibc-dev
-BuildRequires : pypi(pybind11)
 BuildRequires : pypi-pytest
 BuildRequires : python3-dev
 # Suppress stripping binaries
@@ -86,6 +85,7 @@ python components for the pypi-pybind11 package.
 Summary: python3 components for the pypi-pybind11 package.
 Group: Default
 Requires: python3-core
+Provides: pypi(pybind11)
 
 %description python3
 python3 components for the pypi-pybind11 package.
@@ -101,7 +101,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1716518944
+export SOURCE_DATE_EPOCH=1716852590
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -162,7 +162,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1716518944
+export SOURCE_DATE_EPOCH=1716852590
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pybind11
 cp %{_builddir}/pybind11-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-pybind11/3dbd61e2b2c71dcc658c3da90bacf2e15958075a || :
