@@ -6,10 +6,10 @@
 # autospec commit: a5d3013
 #
 Name     : pypi-pybind11
-Version  : 2.13.0
-Release  : 65
-URL      : https://github.com/pybind/pybind11/archive/v2.13.0/pybind11-2.13.0.tar.gz
-Source0  : https://github.com/pybind/pybind11/archive/v2.13.0/pybind11-2.13.0.tar.gz
+Version  : 2.13.1
+Release  : 66
+URL      : https://github.com/pybind/pybind11/archive/v2.13.1/pybind11-2.13.1.tar.gz
+Source0  : https://github.com/pybind/pybind11/archive/v2.13.1/pybind11-2.13.1.tar.gz
 Summary  : Seamless operability between C++11 and Python
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -92,8 +92,8 @@ python3 components for the pypi-pybind11 package.
 
 
 %prep
-%setup -q -n pybind11-2.13.0
-cd %{_builddir}/pybind11-2.13.0
+%setup -q -n pybind11-2.13.1
+cd %{_builddir}/pybind11-2.13.1
 %patch -P 1 -p1
 
 %build
@@ -101,7 +101,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1719418330
+export SOURCE_DATE_EPOCH=1719505653
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -162,7 +162,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1719418330
+export SOURCE_DATE_EPOCH=1719505653
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pybind11
 cp %{_builddir}/pybind11-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-pybind11/3dbd61e2b2c71dcc658c3da90bacf2e15958075a || :
